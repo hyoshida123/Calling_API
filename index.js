@@ -16,11 +16,11 @@ app.get('/', (req, res) => {
     		location: 'Berkeley'
   		},
 		headers: {
-			"Content-Type": 'application/json',
-			"Authorization": 'Bearer [API_KEY]'
+			'Content-Type': 'application/json',
+			'Authorization': 'Bearer [API_KEY]'
 		},
 		json: true
-	}
+	};
 
 	request(options)
 		.then((yelpDataReturned) => {
@@ -28,16 +28,16 @@ app.get('/', (req, res) => {
 			restaurants.forEach((restaurant) => {
 				console.log(restaurant.name);
 			});
-			res.send(restaurants)
+			res.send(restaurants);
 		})
 		.catch((err) => {
-			console.log('error:', err)
-			res.send('error')
+			console.log('error:', err);
+			res.send('error');
 		}); 
 
 })
 
 // Creates a server.
 app.listen(1400, (req, res) => {
-	console.log('server is listening at port 1400.')
+	console.log('server is listening at port 1400.');
 });
