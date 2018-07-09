@@ -1,1 +1,1 @@
-Practice using Django framework
+Practice using Django framework by following a tutorial of making a poll app with Django.
